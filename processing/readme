@@ -1,0 +1,11 @@
+"The Space beyond me"
+Apparatus for reviving spaces that are captured in celluloid.
+A collaboration between Julius von Bismarck (http://www.juliusvonbismarck.com/) 
+and Andreas Schmelas (http://www.andreas-schmelas.de/).
+
+Processing Applications:
+
+version 1 ("CameraControl"): A controll application for driving the Arduino width the attached stepper motors. _legacy!
+version 2 ("ArduinoExport"): An application for exporting the data files into an Arduino PROGMEM format.
+
+using processing 0194 (processing.org)

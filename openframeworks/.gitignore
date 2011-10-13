@@ -1,0 +1,7 @@
+build/
+*.mov
+*.jpg
+*.jpeg
+*.slo
+*.lo
+*.o

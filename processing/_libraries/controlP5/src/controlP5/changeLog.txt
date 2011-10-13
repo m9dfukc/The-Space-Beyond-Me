@@ -1,0 +1,85 @@
+changeLog:
+0.4.1
+* controller, added changeValue() to change the float value of a controller without broadcasting its change as a event. 
+* numberbox added setMultiplier() and multiplier() to customize the value sensitivity.
+* toggle setLabelVisible() is now working.
+* adding setTitle, showCoordinates, hideCoordinates to ControlWindow. only applies to controlWindows of type PAppletWindow (external window).
+* adding Matrix.set
+* Controller.isInside() is public now
+* added ControlFont. does not support textarea and textfield yet.
+
+note: take a look at subversion changelog generator http://ch.tudelft.nl/~arthur/svn2cl/
+
+0.3.15
+* Texfield - textfield scrolls to the left if text is larger than display area.
+* Knob - knob setValue issue solved.
+
+*BitFontRenderer
+removed getWidth(String theText, int theFontIndex) 
+is now getWidth(String theText, Label theLabel);
+
+removed getWidth(String theText, int theFontIndex, int theLength)) 
+is now getWidth(String theText, Label theLabel, int theLength));
+
+
+0.3.14
+* ScrollList
+adding void hideScrollbar()
+adding void showScrollbar()
+adding void showScrollbar()
+adding void scroll(float)
+adding boolean isScrollbarVisible()
+
+* Textarea
+adding void hideScrollbar()
+adding void showScrollbar()
+adding void showScrollbar()
+adding void scroll(float)
+adding boolean isScrollbarVisible()
+
+* Textfield
+textinput now works from a controlWindow
+
+* Label
+adding adjust() to fix the cutting off of Labels when changing fonts.
+use e.g. mySlider.captionLabel().setFont(ControlP5.grixel).adjust();
+
+0.3.13
+* Textfield: 
+adding setAutoClear(true/false) prevents the textfield to be cleared after pressing RETURN.
+adding clear(), clears the current textline
+adding keepFocus(true/false)
+adding getTextList()
+adding setAutoClear(true/false)
+adding isAutoClear()
+adding submit()
+
+0.3.12
+* Radio: if deactiveAll is set before the first button is added, the first button will not trigger an event.
+* ControlGroup: added method getBackgroundHeight() to get the height of a group's background that has been set before.
+* Textfield: fixed bug with clearing the variable myTextline too early.
+
+0.3.11
+* added method setText to Textfield
+* made corrections to Range, _myUnit was not set properly. now fixed. Range remains experimental.
+
+0.3.10
+* fixed little issues with setColor, again.
+* removed decimal point when setDecimalPrecision(0)
+
+0.3.9
+* Range: defautValue for min shows correct value now.
+* Radio: added deactivateAll()
+* TextLabel: added setWidth, setHeight
+* setColor -Label(), -Active(), -Value(), -Foreground(), -Background(): issues resolved and tested for slider, range, button, knob, sliderlist, multilist, toggle, radio
+* Controller: added method setDecimalPrecision(int theNum) to set the decimal precision for floats when displayed as valueLabel. the precision does not apply to the returned float value.
+* Controller.captionLabel().set("txt") is fixed.
+* controlP5.setAutoDraw(true/false) issue is fixed.
+* controlWindow.post() has been deleted.
+* Knob: issue with minimum value has been resolved.
+
+how to move a textlabel that has been created with "new" to another tab than the default:
+Tab myTab = controlP5.addTab("new");
+Textlabel myTextlabel = new Textlabel(this,"a single textlabel.",20,100,400,200,0xffff0000,ControlP5.synt24);
+myTab.addDrawable(myTextlabel);
+
