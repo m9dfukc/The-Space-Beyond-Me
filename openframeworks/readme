@@ -9,5 +9,7 @@ Openframeworks Application(s):
 "CAHVTracker": application for handling voodoo camera tracker motion data. (_legacy - build into "ControlApplication")
 "FeatureTracker": application for analyzing video and retrieving motion data. (_legacy)
 
+because of licence restrictions there is no media content provided!
+
 using openframeworks 062FAT (openframeworks.cc)
 using voodoocamera tracker 1.1.0 (www.digilab.uni-hannover.de)

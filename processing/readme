@@ -8,4 +8,6 @@ Processing Applications:
 version 1 ("CameraControl"): A controll application for driving the Arduino width the attached stepper motors. _legacy!
 version 2 ("ArduinoExport"): An application for exporting the data files into an Arduino PROGMEM format.
 
+because of licence restrictions there is no media content provided!
+
 using processing 0194 (processing.org)
