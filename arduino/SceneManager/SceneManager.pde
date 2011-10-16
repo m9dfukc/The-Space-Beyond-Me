@@ -6,15 +6,10 @@
 
 using namespace sbm;
 
-unsigned long lastEvent = 0;
-unsigned long timeBetween = 0;
-
 long* myFrame;
 long* mySteps;
 
-long framePos       = 0;
-long lastFramePos   = -1;
-long voidDataFrames = 0;
+long framePos = 0;
 
 void setup() {
   sensor.setup( callbackNextFrame, callbackPreviousFrame, callbackNextScene, callbackStartFilm, callbackEndFilm );
@@ -34,19 +29,9 @@ void callbackNextFrame() {
   framePos = data.nextFrame();
   myFrame = data.getFrame();
   mySteps = data.getSteps();
+  
   steppers.stepTo(mySteps[0], mySteps[1], mySteps[2]);
-  
   disp.update(myFrame[0], myFrame[1], myFrame[2], myFrame[3], myFrame[4]);
-  
-  if (framePos == lastFramePos) {
-    disp.clearscreen();
-    voidDataFrames++;
-    Serial.print("Frames missing: ");
-    Serial.print(voidDataFrames);
-  } else {
-    voidDataFrames = 0;
-  }
-  lastFramePos = framePos;
 }
 
 void callbackPreviousFrame() {
